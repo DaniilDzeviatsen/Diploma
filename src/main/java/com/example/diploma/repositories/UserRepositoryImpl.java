@@ -12,7 +12,7 @@ public class UserRepositoryImpl extends BaseJpaRepository<User, Long> implements
     }
 
     @Override
-    public Optional<User> findByUserName(String username) {
+    public Optional<User> findByUsername(String username) {
         return entityManager.createQuery("""
                         SELECT user
                         FROM User user
