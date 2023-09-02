@@ -1,4 +1,4 @@
-package com.example.diploma.entity;
+package com.example.diploma.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

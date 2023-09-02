@@ -1,6 +1,6 @@
 package com.example.diploma.repositories;
 
-import com.example.diploma.entity.Poem;
+import com.example.diploma.model.poem.Poem;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

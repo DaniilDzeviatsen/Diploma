@@ -1,6 +1,6 @@
 package com.example.diploma.repositories;
 
-import com.example.diploma.entity.User;
+import com.example.diploma.model.user.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

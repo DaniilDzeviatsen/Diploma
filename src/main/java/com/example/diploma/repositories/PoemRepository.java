@@ -1,6 +1,6 @@
 package com.example.diploma.repositories;
 
-import com.example.diploma.entity.Poem;
+import com.example.diploma.model.poem.Poem;
 
 import java.util.List;
 import java.util.Optional;

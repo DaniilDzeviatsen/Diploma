@@ -1,19 +1,17 @@
-package com.example.diploma.entity;
+package com.example.diploma.model.user;
 
+import com.example.diploma.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
 import lombok.experimental.Accessors;
-
-import java.util.Collection;
 
 @Entity
 @Setter
 @Getter
 @Accessors(chain = true)
 @Table(name = "users")
-public class User extends BaseEntity{
+public class User extends BaseEntity {
 
     @Column(name = "username", nullable = false, unique = true)
     private String username;

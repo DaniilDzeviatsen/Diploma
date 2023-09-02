@@ -1,5 +1,7 @@
-package com.example.diploma.entity;
+package com.example.diploma.model.poem;
 
+import com.example.diploma.model.user.User;
+import com.example.diploma.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +14,7 @@ import java.time.Instant;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Poem extends BaseEntity{
+public class Poem extends BaseEntity {
 
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)

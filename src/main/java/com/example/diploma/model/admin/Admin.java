@@ -1,5 +1,6 @@
-package com.example.diploma.entity;
+package com.example.diploma.model.admin;
 
+import com.example.diploma.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +20,6 @@ public class Admin extends BaseEntity {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password", nullable = false, unique = true)
-    private String password;
+    @Column(name = "password_hash", nullable = false, unique = true)
+    private String passwordHash;
 }

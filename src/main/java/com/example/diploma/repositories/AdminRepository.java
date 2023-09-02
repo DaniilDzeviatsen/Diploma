@@ -1,6 +1,6 @@
 package com.example.diploma.repositories;
 
-import com.example.diploma.entity.Admin;
+import com.example.diploma.model.admin.Admin;
 
 import java.util.Optional;
 
