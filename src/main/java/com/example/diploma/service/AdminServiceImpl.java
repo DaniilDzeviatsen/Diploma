@@ -27,7 +27,7 @@ public class AdminServiceImpl implements AdminService{
     private final TransactionOperations txOps;
     @Override
     public AccessToken signIn(AdminSignInDto dto) {
-        Admin admin=adminRepo.findByName(dto.getName())
+        Admin admin=adminRepo.findByEmail(dto.getEmail())
                 .orElseThrow(()->new BadCredentialsException(""));
 
         if (!passwordEncoder.matches(dto.getPassword(), admin.getPasswordHash())){

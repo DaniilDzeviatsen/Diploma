@@ -12,13 +12,13 @@ public class UserRepositoryImpl extends BaseJpaRepository<User, Long> implements
     }
 
     @Override
-    public Optional<User> findByUsername(String username) {
+    public Optional<User> findByEmail(String email) {
         return entityManager.createQuery("""
                         SELECT user
                         FROM User user
-                        WHERE lower(user.username)=lower(:username) 
+                        WHERE lower(user.email)=lower(:email) 
                         """, User.class)
-                .setParameter("username", username)
+                .setParameter("email", email)
                 .getResultStream()
                 .findFirst();
     }

@@ -12,13 +12,13 @@ public class AdminRepositoryImpl extends BaseJpaRepository<Admin, Long> implemen
     }
 
     @Override
-    public Optional<Admin> findByName(String name) {
+    public Optional<Admin> findByEmail(String email) {
         return entityManager.createQuery("""
                         SELECT admin
                         FROM Admin admin
-                        WHERE lower(admin.name)=lower(:name) 
+                        WHERE lower(admin.email)=lower(:email) 
                         """, Admin.class)
-                .setParameter("name", name)
+                .setParameter("email", email)
                 .getResultStream()
                 .findFirst();
     }

@@ -7,5 +7,7 @@ public class UserSignInDto {
 
     String email;
 
+    String username;
+
     String password;
 }

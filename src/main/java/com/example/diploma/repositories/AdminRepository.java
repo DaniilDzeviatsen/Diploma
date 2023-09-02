@@ -5,5 +5,5 @@ import com.example.diploma.model.admin.Admin;
 import java.util.Optional;
 
 public interface AdminRepository extends BaseRepository<Admin, Long> {
-    Optional<Admin>findByName(String name);
+    Optional<Admin>findByEmail(String email);
 }
