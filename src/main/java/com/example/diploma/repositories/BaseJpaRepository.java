@@ -16,7 +16,7 @@ public class BaseJpaRepository<E, ID> implements BaseRepository<E, ID> {
     private final Class<E> entityClass;
 
     @Override
-    public E getReferenceById(Id id) {
+    public E getReferenceById(ID id) {
         return entityManager.getReference(entityClass, id);
     }
 

@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface BaseRepository<E, ID> {
 
-    E getReferenceById(Id id);
+    E getReferenceById(ID id);
 
     Optional<E> findByID(ID id);
 

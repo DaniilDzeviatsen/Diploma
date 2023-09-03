@@ -14,14 +14,14 @@ public class PoemRepositoryImpl extends BaseJpaRepository<Poem, Long> implements
     }
 
     @Override
-    public List<Poem> findAllPoemsByUser(long userId, int pageSize, int pageNumber) {
+    public List<Poem> findAllPoemsByUser(String userName, int pageSize, int pageNumber) {
         return entityManager.createQuery("""
                         SELECT poem
                         FROM Poem poem
-                        WHERE poem.user.id = :userId
+                        WHERE poem.user.username = :userName
                         ORDER BY poem.createdAt DESC
                         """, Poem.class)
-                .setParameter("userId", userId)
+                .setParameter("username", userName)
                 .setMaxResults(pageSize)
                 .setFirstResult(pageNumber + pageSize)
                 .getResultList();
